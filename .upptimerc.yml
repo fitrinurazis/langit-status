@@ -1,31 +1,89 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Halaman status Langit Panel (Upptime): https://status.langitpanel.com
+# Dicek GitHub Actions tiap 5 menit, terpisah dari server Langit Panel.
+owner: fitrinurazis
+repo: langit-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Secret Site
-    url: $SECRET_SITE
+  - name: Website
+    url: https://langitpanel.com
+  - name: Dashboard
+    url: https://dashboard.langitpanel.com
+  - name: API Panel
+    url: https://apilangitpanel.fitrinurazis.com/health
+  # Subdomain tanpa app → halaman fallback 503 = tunnel & router App Hosting hidup.
+  - name: Jaringan App Hosting
+    url: https://status-probe.seaone.id
+    expectedStatusCodes:
+      - 503
+  # Pintu masuk trafik semua Server VPS (edge openresty).
+  - name: Gateway Server VPS
+    check: "tcp-ping"
+    url: 202.10.45.61
+    port: 443
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.langitpanel.com
+  name: Status Langit Panel
+  logoUrl: https://langitpanel.com/icon_192.png
+  favicon: https://langitpanel.com/favicon_32.png
+  introTitle: "Status layanan Langit Panel"
+  introMessage: "Pemantauan otomatis tiap 5 menit dari luar jaringan kami. Kalau ada gangguan, hubungi kami lewat WhatsApp dari langitpanel.com."
   navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: Langit Panel
+      href: https://langitpanel.com
+    - title: Dashboard
+      href: https://dashboard.langitpanel.com
+    - title: Panduan
+      href: https://dashboard.langitpanel.com/docs
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+i18n:
+  activeIncidents: Gangguan aktif
+  allSystemsOperational: Semua layanan berjalan normal
+  incidentReport: "Laporan gangguan #$NUMBER"
+  activeIncidentSummary: "Dibuka $DATE dengan $POSTS pembaruan"
+  incidentTitle: "$TITLE"
+  incidentDetails: Detail gangguan
+  incidentFixed: Selesai
+  incidentOngoing: Berlangsung
+  incidentOpenedAt: Dibuka
+  incidentClosedAt: Ditutup
+  incidentViewOnGitHub: Lihat di GitHub
+  incidentCommentSummary: "Ditulis $DATE oleh $AUTHOR"
+  incidentBack: "← Kembali ke semua gangguan"
+  pastIncidents: Riwayat gangguan
+  pastIncidentsResolved: "Diselesaikan dalam $MINUTES menit dengan $POSTS pembaruan"
+  liveStatus: Status langsung
+  overallUptime: "Uptime keseluruhan: $UPTIME"
+  overallUptimeTitle: Uptime keseluruhan
+  averageResponseTime: "Rata-rata waktu respons: $TIMEms"
+  averageResponseTimeTitle: Rata-rata waktu respons
+  sevelDayResponseTime: Waktu respons 7 hari
+  responseTimeMs: Waktu respons (ms)
+  up: Normal
+  down: Gangguan
+  degraded: Lambat
+  ms: ms
+  loading: Memuat
+  navGitHub: GitHub
+  footer: "Halaman ini dibuat dengan [Upptime]($REPO)"
+  rateLimitExceededTitle: Batas permintaan tercapai
+  rateLimitExceededIntro: "Terlalu banyak permintaan ke GitHub dari jaringanmu. Coba lagi pukul $RESET."
+  errorTitle: Terjadi kesalahan
+  errorIntro: "Data status gagal dimuat. Coba muat ulang halaman."
+  errorText: "Detail teknis:"
+  errorHome: Kembali ke beranda
+  pastScheduledMaintenance: Pemeliharaan terjadwal sebelumnya
+  scheduledMaintenance: Pemeliharaan terjadwal
+  scheduledMaintenanceSummaryStarted: "Dimulai $DATE selama $DURATION menit"
+  scheduledMaintenanceSummaryStarts: "Dimulai $DATE selama $DURATION menit"
+  startedAt: Dimulai
+  startsAt: Dimulai
+  duration: Durasi
+  durationMin: "$DURATION menit"
+  incidentCompleted: Selesai
+  incidentScheduled: Terjadwal
+  duration24H: 24 jam
+  duration7D: 7 hari
+  duration30D: 30 hari
+  duration1Y: 1 tahun
+  durationAll: Semua

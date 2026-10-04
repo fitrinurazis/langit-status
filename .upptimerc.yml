@@ -1,5 +1,5 @@
 # Halaman status Langit Panel (Upptime): https://status.langitpanel.com
-# Dicek GitHub Actions tiap 5 menit, terpisah dari server Langit Panel.
+# Dicek GitHub Actions tiap 5 menit, terpisah dari server Langit Panel (jaringan independen).
 owner: fitrinurazis
 repo: langit-status
 

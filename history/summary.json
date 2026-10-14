@@ -76,19 +76,20 @@
     "url": "202.10.45.61",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "gateway-server-vps",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 221,
-    "timeDay": 219,
-    "timeWeek": 225,
-    "timeMonth": 221,
-    "timeYear": 221,
+    "status": "up",
+    "uptime": "98.84%",
+    "uptimeDay": "89.24%",
+    "uptimeWeek": "98.46%",
+    "uptimeMonth": "98.84%",
+    "uptimeYear": "98.84%",
+    "time": 218,
+    "timeDay": 202,
+    "timeWeek": 220,
+    "timeMonth": 218,
+    "timeYear": 218,
     "dailyMinutesDown": {
-      "2026-10-13": 0
+      "2026-10-14": 96,
+      "2026-10-13": 59
     }
   }
 ]

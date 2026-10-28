@@ -9,7 +9,7 @@ sites:
   - name: Dashboard
     url: https://dashboard.langitpanel.com
   - name: API Panel
-    url: https://apilangitpanel.fitrinurazis.com/health
+    url: https://api.langitpanel.com/health
   # Subdomain tanpa app → halaman fallback 503 = tunnel & router App Hosting hidup.
   - name: Jaringan App Hosting
     url: https://status-probe.seaone.id
